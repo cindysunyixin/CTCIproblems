@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.HashMap;
+import java.util.HashSet;
 public class c1p4{
 
      public static void main(String []args){
@@ -7,27 +7,17 @@ public class c1p4{
         String line = sc.nextLine();
         System.out.println(PalindromePermutation(line));
     }
-    public static boolean PalindromePermutation(String input) {
-        String word = input.trim();
-        char[] letters = word.toCharArray();
-        HashMap<Character, Integer> count = new HashMap<Character, Integer>();
-        for (char a: letters) {
-            count.put(a, 1);
-            if (count.containsKey(a)) {
-                count.put(a, count.get(a) + 1);
+    public static boolean PalindromePermutation(String word) {
+        HashSet<Character> s = new HashSet<Character>();
+        for (int i = 0; i < word.length(); i++) {
+            if (s.contains(word.charAt(i))) {
+                s.remove(word.charAt(i));
+            } else {
+                s.add(word.charAt(i));
             }
         }
-        for (char b: count.keySet()) {
-            if (count.get(b) % 2 == 0) {
-                return true;
-            } else {
-                
-            }
+        return s.size() <= 1;
+
         }
 
     }
-
-
-
-
-}

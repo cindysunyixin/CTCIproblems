@@ -6,6 +6,14 @@ public class c1p4{
         Scanner sc = new Scanner(System.in);
         String line = sc.nextLine();
         System.out.println(PalindromePermutation(line));
-
+    }
+    public static boolean PalindromePermutation(String input) {
+        char[] letters = input.toCharArray();
+        HashMap
 
     }
+
+
+
+
+}

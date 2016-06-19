@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.HashMap;
 import java.util.Arrays;
 import java.util.Map;
 public class c1p5sol1{
